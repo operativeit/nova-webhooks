@@ -20,7 +20,7 @@
         "php": "^8.1",
         "bensampo/laravel-enum": "^6.0",
         "coroowicaksono/chart-js-integration": "^0.4.3",
-        "laravel/nova": "^5.0",
+        "laravel/nova": "^4.32|^5.0",
         "owenmelbz/nova-radio-field": "^1.0",
         "spatie/laravel-webhook-server": "^3.0",
         "symfony/class-loader": "^3.4"
