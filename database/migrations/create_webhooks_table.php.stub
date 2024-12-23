@@ -12,7 +12,7 @@ class CreateWebhooksTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('url');
-            $table->json('settings');
+            $table->json('settings')->nullable();
             $table->string('secret');
             $table->string('modified_by')
                 ->comment('Foreign key that allows users to see who created/modified the webhook last.')
