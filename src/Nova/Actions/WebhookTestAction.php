@@ -15,7 +15,7 @@ use Illuminate\Support\Collection;
 use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\ActionFields;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use OwenMelbz\RadioField\RadioButton;
+use NormanHuth\NovaRadioField\Radio;
 
 class WebhookTestAction extends Action
 {
@@ -102,12 +102,10 @@ class WebhookTestAction extends Action
     public function fields(NovaRequest $request)
     {
         return [
-            RadioButton::make(__('nova-webhooks::nova.webhook_to_test'), 'hook')
+            Radio::make(__('nova-webhooks::nova.webhook_to_test'), 'hook')
                 ->options(
                     WebhookModels::parseSavedList((array) $this->model->settings)
-                )
-                ->stack() // optional (required to show hints)
-                ->marginBetween() // optional
+                ),
         ];
     }
 }
